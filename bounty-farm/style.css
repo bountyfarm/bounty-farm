@@ -1,0 +1,129 @@
+:root {
+  --green: #2d6a4f;
+  --yellow: #f4a261;
+  --black: #1b1b1e;
+  --white: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--green), #95d5b2);
+  color: var(--black);
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--black);
+  color: var(--yellow);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.form-section, .stats, .chart, .records {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--green);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.species {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f8f5;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.species label {
+  font-weight: bold;
+  color: var(--green);
+}
+
+input[type="number"], input[type="date"] {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  width: 100px;
+  text-align: center;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: var(--yellow);
+  color: var(--black);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: #e76f51;
+  color: white;
+}
+
+#weeklyTotal {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green);
+  font-weight: bold;
+}
+
+#recordList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 1rem 0;
+}
+
+.record-item {
+  padding: 0.8rem;
+  background: #f1f8f5;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border-left: 5px solid var(--yellow);
+}
+
+.danger {
+  background: #e74c3c !important;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2.2rem; }
+  .species { flex-direction: column; gap: 0.5rem; }
+  input[type="number"] { width: 100%; }
+}

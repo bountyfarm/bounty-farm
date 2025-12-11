@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bounty Farm - Egg Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header>
+    <h1>🥚 Bounty Farm</h1>
+    <p>Egg Production Tracker</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add Today's Eggs</h2>
+      <form id="eggForm">
+        <input type="date" id="date" required />
+        
+        <div class="species">
+          <label>🐔 Frizzle Hens</label>
+          <input type="number" min="0" value="0" id="frizzle" />
+        </div>
+        
+        <div class="species">
+          <label>🐥 Silkie Chickens</label>
+          <input type="number" min="0" value="0" id="silkie" />
+        </div>
+        
+        <div class="species">
+          <label>🐦 Guinea Fowl</label>
+          <input type="number" min="0" value="0" id="guinea" />
+        </div>
+
+        <button type="submit">Save Record</button>
+      </form>
+    </section>
+
+    <section class="stats">
+      <h2>This Week's Total</h2>
+      <div id="weeklyTotal">Loading...</div>
+    </section>
+
+    <section class="chart">
+      <h2>Weekly Egg Production</h2>
+      <canvas id="eggChart"></canvas>
+    </section>
+
+    <section class="records">
+      <h2>All Records</h2>
+      <div id="recordList"></div>
+      <button id="clearAll" class="danger">Clear All Data</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
